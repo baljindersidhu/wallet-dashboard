@@ -1,0 +1,581 @@
+.landigPageBackdrop{
+    position: absolute;
+    top: 0vh;
+    right: -3vw;
+    height: 100vh;
+    background-color: #fbfcff;
+    min-width: 94vw;
+    animation: slide-from-right 1s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slide-from-right{
+    0%{
+        border-top-left-radius: 0vh;
+        border-bottom-left-radius: 0vh;
+        transform: translateX(100vw);
+    }
+
+    50%{
+        border-top-left-radius: 0vh;
+        border-bottom-left-radius: 0vh;
+        transform: translateX(10vw);
+    }
+
+    100%{
+        border-top-left-radius: 5vh;
+        border-bottom-left-radius: 5vh;
+        transform: skew(-5deg, 0deg);
+    }
+}
+
+.landingPageContent{
+    position: absolute;
+    top: 0vh;
+    padding-left: 14vw;
+    height: 100vh;
+    width: 85vw;
+    opacity: 0;
+    animation: fade-in 0.35s ease-out;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+.landingPageHeader{
+    margin-top: 4.5vh;
+    margin-bottom: 5.5vh;
+}
+
+.landingPageHeader .searchContainer{
+    padding: 1vh 1vw;
+    border-radius: 1.2vh;
+    box-shadow: 0px 4px 30px #eceef5;
+    background: white;
+    color: #7869a6;
+    font-size: 1.6vh;
+}
+
+.landingPageHeader .searchContainer img{
+    height: 3vh;
+    padding-top: 0.75vh;
+}
+
+.landingPageHeader .searchContainer input{
+    font-family: 'Baloo 2', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    font-size: 1.6vh;
+    margin-left: 0.5vw;
+    width: 40vw;
+    border: none;
+    outline: none;
+}
+
+.landingPageHeader .action{
+    color: #594b85;
+    padding: 0vh 1vw;
+    cursor: pointer;
+    font-size: 1.85vh;
+}
+
+.landingPageHeader .action svg{
+    transition: transform 0.25s ease-in-out;
+}
+
+.landingPageHeader .action svg:hover{
+    transform: scale(1.2);
+}
+
+.landingPageHeader .friends{
+    margin-left: 17vw;
+    margin-right: 11vw;
+}
+
+.landingPageHeader .friends .friend{
+    width: 2vw;
+}
+
+.landingPageHeader .friends .friend img{
+    width: 100%;
+}
+
+.landingPageContent .header{
+    margin-bottom: 3vh;
+}
+
+.landingPageContent .header .heading{
+    color: #36266a;
+    font-weight: 600;
+    font-size: 2.75vh;
+}
+
+.landingPageContent .header .subheading{
+    font-weight: normal;
+    font-size: 1.85vh;
+}
+
+.landingPageContent .header .selector{
+    color: #6b599d;
+    background-color: #dbd8e8;
+    border-radius: 1.7vh;
+    padding: 0.75vh 0.5vw;
+    cursor: pointer;
+}
+
+.landingPageContent .header .selector .label{
+    margin-left: 0.25vw;
+    font-weight: bold;
+    font-size: 1.4vh;
+}
+
+.landingPageContent .header .selector .icon{
+    font-size: 1vh;
+    margin: 0vh 0.35vw;
+    height: 1.3vh;
+}
+
+.landingPageContent .card{
+    background-color: white;
+    padding: 2.5vh 1.5vw;
+    border-radius: 1.2vh;
+    box-shadow: 0px 4px 30px #eceef5;
+}
+
+.budgetStatistics{
+    width: 27vw;
+}
+
+.budgetStatistics .balanceInsights .settings{
+    font-size: 0.8vh;
+    color: #a59dbc;
+}
+
+.budgetStatistics .balanceInsights .settings svg{
+    margin-left: 0.45vh;
+}
+
+.budgetStatistics .balanceInsights .totalBalance{
+    font-weight: 600;
+}
+
+.budgetStatistics .balanceInsights .totalBalance .label{
+    color: #887da7;
+    font-size: 1.85vh;
+    margin-top: 1.5vh;
+}
+
+.budgetStatistics .balanceInsights .totalBalance .value{
+    font-size: 3.5vh;
+    color: #25105d;
+}
+
+.budgetStatistics .balanceInsights .balanceDetails{
+    padding: 2.5vh 1.5vw;
+    font-weight: bold;
+}
+
+.budgetStatistics .balanceInsights .balanceDetails .period{
+    font-size: 1.5vh;
+    color: #c0bad0;
+}
+
+.budgetStatistics .balanceInsights .balanceDetails .label{
+    font-size: 1.65vh;
+    color:#423173;
+}
+
+.budgetStatistics .balanceInsights .balanceDetails .value{
+    font-size: 2.1vh;
+    color: #ffb251;
+}
+
+.budgetStatistics .dailySpendCategoryChart{
+    margin-top: 10vh;
+}
+
+.budgetStatistics .dailySpendCategoryChart .bars .greenBar, .budgetStatistics .dailySpendCategoryChart .bars .orangeBar{
+    width: 1.25vw;
+    border-radius: 0.9vh;
+    transform: scaleY(0);
+    transform-origin: bottom;
+}
+
+.budgetStatistics .dailySpendCategoryChart .bars .greenBar{
+    height: 8vh;
+    background-image: linear-gradient(45deg, #b0e191, #9dd877);
+    animation: grow-vertical 0.35s ease-in-out;
+    animation-delay: 1.25s;
+    animation-fill-mode: forwards;
+}
+
+.budgetStatistics .dailySpendCategoryChart .bars .orangeBar{
+    /* height: 21vh; */
+    margin-left: 0.25vw;
+    background-image: linear-gradient(45deg, #ffa531, #f79c27);
+    animation: grow-vertical 0.5s ease-in-out;
+    animation-delay: 1.25s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes grow-vertical{
+    from { transform: scaleY(0); }
+    to { transform: scaleY(1); }
+}
+
+.budgetStatistics .dailySpendCategoryChart .row .bars:nth-child(1) .orangeBar{
+    height: 18vh;
+}
+
+.budgetStatistics .dailySpendCategoryChart .row .bars:nth-child(3) .orangeBar{
+    height: 15vh;
+}
+
+.budgetStatistics .dailySpendCategoryChart .row .bars:nth-child(5) .orangeBar{
+    position: relative;
+    height: 26vh;
+}
+
+.budgetStatistics .dailySpendCategoryChart .row .bars:nth-child(7) .orangeBar{
+    height: 19vh;
+}
+
+.budgetStatistics .dailySpendCategoryChart .row .bars:nth-child(5) .orangeBar::before{
+    position: absolute;
+    content: '- $753.00';
+    font-family: 'Baloo 2', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    color: #a3d0ab;
+    background-color: #eaf4ec;
+    font-weight: bold;
+    font-size: 1.5vh;
+    width: 4.25vw;
+    text-align: center;
+    padding: 0.75vh 0.5vw;
+    top: -6vh;
+    left: -3.5vh;
+    border-radius: 0.75vh;
+}
+
+.budgetStatistics .dailySpendCategoryChart .row .bars:nth-child(5) .orangeBar::after{
+    position: absolute;
+    content: '';
+    background-color: #eaf4ec;
+    padding: 0.75vh 0.5vw;
+    top: -3vh;
+    left: 0.15vh;
+    transform: rotate(45deg);
+}
+
+.budgetStatistics .dailySpendCategoryChart .row .bars:nth-child(5) .orangeBar::before, .budgetStatistics .dailySpendCategoryChart .row .bars:nth-child(5) .orangeBar::after{
+    opacity: 0;
+    animation: fade-in 0.35s ease-in-out;
+    animation-delay: 1.75s;
+    animation-fill-mode: forwards;
+}
+
+.budgetStatistics .dailySpendCategoryChart .bars .label{
+    color: #eeedf4;
+    margin-top: 2vh;
+    font-weight: bold;
+    font-size: 1.5vh;
+}
+
+.dailyProgress{
+    width: 27vw;
+}
+
+.dailyProgress .dailySpendInsights svg.insight{
+    height: 19vh;
+    width: 100%;
+}
+
+.dailyProgress .dailySpendInsights svg.insight circle.parentCircle{
+    fill: #dbd8e8;
+}
+
+.dailyProgress .dailySpendInsights svg.insight circle.parentInnerCircle{
+    fill: white;
+}
+
+.dailyProgress .dailySpendInsights svg.insight circle.categ1{
+    fill: #e1d7ff;
+}
+
+.dailyProgress .dailySpendInsights svg.insight circle.categ2{
+    fill: #e7fdda;
+}
+
+.dailyProgress .dailySpendInsights svg.insight text{
+    fill: #676187;
+    font-size: 1.55vh;
+    font-weight: 600;
+}
+
+.dailyProgress .dailySpendInsights .cardTitle{
+    font-weight: 600;
+    margin-bottom: 2vh;
+}
+
+.dailyProgress .dailySpendInsights .cardTitle .icon{
+    color:#e0ddeb;
+    font-size: 1.7vh;
+}
+
+.dailyProgress .dailySpendInsights .cardTitle .heading{
+    color: #25105d;
+    font-size: 2.75vh;
+}
+
+.dailyProgress .dailySpendInsights .spend{
+    margin-top: 0.85vh;
+}
+
+.dailyProgress .dailySpendInsights .spend .icon{
+    font-size: 1vh;
+    padding-top: 0.3vh;
+    margin-right: 0.5vw;
+}
+
+.dailyProgress .dailySpendInsights .spend .label{
+    color: #978eb3;
+    font-size: 1.85vh;
+}
+
+.dailyProgress .dailySpendInsights .spend .value{
+    color: #25105d;
+    font-size: 1.7vh;
+    font-weight: 600;
+}
+
+.dailyProgress .dailySpendInsights .spend:nth-child(3) .icon{
+    color: #25105d;
+}
+
+.dailyProgress .dailySpendInsights .spend:nth-child(4) .icon{
+    color: #8ac395;
+}
+
+.goals{
+    margin-top: 5.5vh;
+}
+
+.goals .goal .backdrop::before, .goals .goal .backdrop::after{
+    position: absolute;
+    content: '';
+    top: 0vh;
+    width: 100%;
+    background-color: #d5f5ff;
+    border-radius: 1vh;
+}
+
+.goals .goal .backdrop::before{
+    transform: skew(-7deg, -1.5deg);
+    height: 10vh;
+    border-bottom-right-radius: 0vh;
+    border-bottom-left-radius: 0vh;
+}
+
+.goals .goal .backdrop::after{
+    top: 6vh;
+    left: -0.3vw;
+    height: 8.75vh;
+    transform: skew(-7deg, 0deg);
+    width: calc(100% - 0.065vw);
+    border-top-right-radius: 0vh;
+    border-top-left-radius: 0vh;
+}
+
+.goal .details{
+    top: 0vh;
+    height: 14vh;
+    width: 100%;
+}
+
+.goal .details .icon{
+    padding: 0vh 2vw;
+    margin-top: 1vh;
+}
+
+.goal .details .icon img{
+    height: 3.5vh;
+}
+
+.goal .priceDetails .goalName{
+    color: #55508a;
+    font-size: 2vh;
+    font-weight: 600;
+}
+
+.goal .priceDetails .price{
+    color: #b1c8df;
+    font-weight: 600;
+    font-size: 1.7vh;
+}
+
+.myBudget{
+    margin-top: 10vh;
+    width: 22.5vw;
+    color: white;
+}
+
+.myBudget .backdrop::before, .myBudget .backdrop::after, 
+.myBudget .secondaryBackdrop::before, .myBudget .secondaryBackdrop::after{
+    content: '';
+    position: absolute;
+    background-color: #37276a;
+    height: 10vh;
+    width: 100%;
+    border-radius: 1.5vh;
+}
+
+.myBudget .backdrop::before{
+    height: 16vh;
+    border-bottom-right-radius: 0vh;
+    border-bottom-left-radius: 0vh;
+    transform: skewX(-3deg);
+    left: 0.15vw;
+} 
+
+.myBudget .backdrop::after{
+    top: 10vh;
+    transform: skew(-3deg, 6deg);
+    border-top-left-radius: 0vh;
+    border-top-right-radius: 0vh;
+    width: calc(100% - 0.145vw);
+}
+
+.myBudget .secondaryBackdrop::before, .myBudget .secondaryBackdrop::after{
+    background-color: #dbd8e8;
+}
+
+.myBudget .secondaryBackdrop::before{
+    top: 10.5vh;
+    left: 0.75vw;
+    width: calc(100% - 1vw);
+}
+
+.myBudget .secondaryBackdrop::after{
+    transform: skew(10deg, -8deg);
+    height: 20vh;
+    width: calc(100% - 10vw);
+    right: 0vw;
+    top: -1.5vh;
+}
+
+.myBudget div:nth-child(3){
+    width: 21.5vw;
+    font-size: 1.85vh;
+}
+
+.myBudget .dotsGrid{
+    margin-bottom: -2.5vh;
+}
+
+.myBudget .heading, .myBudget .budget{
+    font-weight: 600;
+}
+
+.myBudget div:nth-child(3).budget{
+    font-size: 3.5vh;
+}
+
+.myBudget .progress{
+    background-color: #7767a5;
+    width: 11vw;
+    height: 1vh;
+    border-radius: 1vh;
+    margin-top: 0.5vh;
+}
+
+.myBudget .progress::before{
+    content: '';
+    position: absolute;
+    background-color: #b0e191;
+    height: 1vh;
+    width: 9vw;
+    transform: scaleX(0);
+    transform-origin: left;
+    border-radius: inherit;
+    animation: grow-horizontal 0.75s ease-out;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes grow-horizontal{
+    from { transform: scaleX(0); }
+    to   { transform: scaleX(1); }
+}
+
+.myBudget .headerIcon img{
+    width: 3vw;
+    top: -5.8vh;
+    left: 1vw;
+}
+
+.transactions{
+    margin-top: 36vh;
+}
+
+.transactions .transaction{
+    margin-bottom: 3vh;
+}
+
+.transaction .icon{
+    height: 5vh;
+    width: 2.5vw;
+    border-radius: 1.25vh;
+}
+
+.transaction:nth-child(2) .icon{
+    background-color: #fdf3db;
+}
+
+.transaction:nth-child(3) .icon{
+    background-color: #7f6a90;
+}
+
+.transaction:nth-child(4) .icon{
+    background-color: #d5f5ff;
+}
+
+.transaction .icon img{
+    width: 1.35vw;
+}
+
+.transaction .categDetail{
+    margin-left: 0.5vw;
+}
+
+.transaction .categDetail .label{
+    color: #55508a;
+    font-size: 1.85vh;
+    font-weight: 600;
+}
+
+.transaction .categDetail .category, .transaction .spendDetail .timestamp{
+    color: #b2acc8;
+    font-weight: 600;
+    font-size: 1.7vh;
+}
+
+.transaction .spendDetail{
+    text-align: right;
+}
+
+.transaction .spendDetail .amount{
+    font-weight: 600;
+    font-size: 1.7vh;
+}
+
+.transaction:nth-child(2) .spendDetail .amount{
+    color: #ffb251;
+}
+
+.transaction:nth-child(3) .spendDetail .amount{
+    color: #9dd877;
+}
+
+.transaction:nth-child(4) .spendDetail .amount{
+    color: #ffb251;
+}

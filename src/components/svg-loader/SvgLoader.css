@@ -1,0 +1,9 @@
+.svgLoaderContainer{
+    width: 1.5vw;
+}
+
+.svgLoaderContainer img{
+    width: 100%;
+    margin: 2vh 0.75vw;
+    cursor: pointer;
+}
